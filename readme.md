@@ -11,3 +11,30 @@ Install requirements (pip install -r requirements.txt)
 
 Run main.py in the 'test' folder
 All additional commands will be added in the 'test_commands' file, using the basic commands from the 'commands' file
+
+
+Installation Guide for Windows:
+
+1. Install FreeCAD
+Download FreeCAD:
+Install FreeCAD:
+Run the installer.
+Use the default installation directory (e.g., C:\Users\<YourUsername>\AppData\Local\Programs\FreeCAD 1.0).
+2. Locate FreeCAD's Python Executable
+Navigate to the FreeCAD installation directory:
+Example: C:\Users\<YourUsername>\AppData\Local\Programs\FreeCAD 1.0\bin.
+Verify the existence of python.exe in the bin directory. This is FreeCAD’s Python environment.
+3. Test FreeCAD's Python
+Open a terminal (Command Prompt or PowerShell).
+Run the following command to verify FreeCAD’s Python:
+"C:\Users\<YourUsername>\AppData\Local\Programs\FreeCAD 1.0\bin\python.exe" --version
+2. You should see output like:
+
+Python 3.x.x
+FreeCAD’s Python environment may already include necessary libraries like PySide2, but let’s confirm and install any missing ones.
+Open the terminal.
+Install PySide2: "C:\Users\<YourUsername>\AppData\Local\Programs\FreeCAD 1.0\bin\python.exe" -m pip install PySide2
+If pip is missing, bootstrap it first: "C:\Users\<YourUsername>\AppData\Local\Programs\FreeCAD 1.0\bin\python.exe" -m ensurepip
+Test PySide2: "C:\Users\<YourUsername>\AppData\Local\Programs\FreeCAD 1.0\bin\python.exe" -c "from PySide2 import QtCore, QtWidgets; print('PySide2 works!')"
+If no errors are shown, you’re good to go.
+Run the Corrected python script: 
